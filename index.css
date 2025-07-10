@@ -1,0 +1,146 @@
+/* =========================
+  Reset básico
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+  Body
+========================= */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #faf6f2;
+  color: #262626;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* =========================
+  Header
+========================= */
+.header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logo h1 {
+  font-size: 1.7rem;
+  color: #ff6f3c;
+  font-weight: 700;
+}
+
+.header nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: #262626;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.header nav a:hover {
+  color: #ff6f3c;
+}
+
+#darkModeToggle {
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: color 0.2s;
+}
+
+/* =========================
+  Footer
+========================= */
+footer {
+  text-align: center;
+  padding: 22px 0 10px 0;
+  font-size: 1rem;
+  color: #888;
+  background: #fff;
+  margin-top: 32px;
+}
+
+/* =========================
+  Modo oscuro
+========================= */
+body.darkmode {
+  background: #181a1b;
+  color: #eaeaea;
+}
+
+body.darkmode .header {
+  background: #232526;
+  border-bottom: 1px solid #232526;
+}
+
+body.darkmode .header nav a {
+  color: #eaeaea;
+}
+
+body.darkmode .header nav a:hover {
+  color: #ffb87a;
+}
+
+body.darkmode .logo h1 {
+  color: #ffb87a;
+}
+
+body.darkmode .banner {
+  background: linear-gradient(120deg, #262626 20%, #353535 90%);
+  color: #ffb87a;
+}
+
+body.darkmode .banner .btn {
+  background: #ffb87a;
+  color: #232526;
+}
+
+body.darkmode .banner .btn:hover {
+  background: #232526;
+  color: #ffb87a;
+}
+
+body.darkmode .libros-destacados {
+  background: #232526;
+}
+
+body.darkmode .libro-card {
+  background: #232526;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.15);
+}
+
+body.darkmode .libro-card .titulo {
+  color: #ffb87a;
+}
+
+body.darkmode footer {
+  background: #232526;
+  color: #b5b5b5;
+}
