@@ -1,0 +1,89 @@
+/* Banner principal */
+.banner {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, #ffb87a 30%, #ff6f3c 100%);
+  color: #fff;
+  text-align: center;
+  padding: 64px 16px 48px 16px;
+  min-height: 240px;
+}
+
+/* Banner headings */
+.banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+}
+
+/* Banner button */
+.banner .btn {
+  background: #fff;
+  color: #ff6f3c;
+  padding: 12px 28px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 15px;
+}
+
+.banner .btn:hover {
+  background: #ff6f3c;
+  color: #fff;
+}
+
+/* Banner slide */
+.banner-slide {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.7s;
+}
+
+.banner-slide.active {
+  display: flex;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Banner indicators */
+.banner-indicators {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.banner-dot {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #fff6;
+  cursor: pointer;
+  transition: background 0.19s, transform 0.16s;
+}
+
+.banner-dot.active {
+  background: #fff;
+  transform: scale(1.2);
+}
